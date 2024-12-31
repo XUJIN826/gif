@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>随机GIF</title>
+  <style>
+    body {
+      text-align: center;
+      padding: 50px;
+    }
+    img {
+      width: 300px;
+      height: 300px;
+    }
+  </style>
+</head>
+<body>
+  <h1>点击按钮显示一个随机的搞笑GIF！</h1>
+  <img id="gif" src="" alt="随机GIF">
+  <button onclick="newGif()">换一个GIF</button>
+
+  <script>
+    const gifs = [
+      "https://media.giphy.com/media/26gJxHl5n8D0Fc3Y0/giphy.gif",
+      "https://media.giphy.com/media/3o7aT1K34wphVwWcTC/giphy.gif",
+      "https://media.giphy.com/media/l3vQXfg9cfmL1vwos/giphy.gif",
+      "https://media.giphy.com/media/7uTVk01INfRGs6ZJ0u/giphy.gif",
+      "https://media.giphy.com/media/hhhuieV1YpnOcyoWaM/giphy.gif"
+    ];
+
+    function newGif() {
+      const randomGif = gifs[Math.floor(Math.random() * gifs.length)];
+      document.getElementById('gif').src = randomGif;
+    }
+  </script>
+</body>
+</html>
